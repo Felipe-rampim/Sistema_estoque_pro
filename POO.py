@@ -4,18 +4,15 @@ import mysql.connector
 import os
 from dotenv import load_dotenv
 
-# Carrega as variáveis do arquivo .env
 load_dotenv()
 
 class Database:
     def __init__(self):
-        # Configurações básicas pegas do .env
         self.host = os.getenv('DB_HOST')
         self.user = os.getenv('DB_USER')
         self.password = os.getenv('DB_PASS')
         self.database = os.getenv('DB_NAME')
 
-        # Garante que o banco de dados exista antes de conectar totalmente
         self._verificar_banco()
 
         self.config = {
@@ -174,7 +171,7 @@ class EstoqueApp:
         tk.Button(btn_frame, text="🧹 Limpar", bg="#6c757d", fg="white", command=self.limpar).pack(side="left", padx=5)
         tk.Button(btn_frame, text="📁 Categorias", bg="#17a2b8", fg="white", command=self.abrir_categorias).pack(side="left", padx=5)
 
-        # Tabela (Treeview)
+        # Tabela 
         colunas = ("ID", "Nome", "Categoria", "Preço", "Estoque")
         self.tree = ttk.Treeview(self.root, columns=colunas, show="headings")
         
