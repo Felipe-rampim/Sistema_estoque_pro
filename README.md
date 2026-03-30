@@ -39,6 +39,8 @@ python main.py
 
 Cadastro, edição e exclusão de produtos com nome, categoria, preço de venda e quantidade em estoque. Produtos com estoque igual ou abaixo do mínimo são destacados em vermelho automaticamente. Gerenciamento de categorias em janela separada, com a categoria "Geral" protegida contra exclusão. Ao remover uma categoria, os produtos vinculados são movidos automaticamente para "Geral". O sistema também possui tabela de fornecedores e uma view `v_estoque_detalhado` que exibe o status de cada produto (`OK` ou `BAIXO`). Aceita preço com vírgula ou ponto como separador decimal.
 
+<img width="1638" height="884" alt="Image" src="https://github.com/user-attachments/assets/f6957a4d-a55e-4f56-8077-5e1e56d88c68" />
+
 ## Banco de Dados
 
 O projeto possui três tabelas principais: `categorias`, `fornecedores` e `produtos`. A tabela de produtos se relaciona com as duas anteriores via chave estrangeira. Ao excluir uma categoria ou fornecedor, o campo correspondente no produto é definido como nulo automaticamente pelo banco.
